@@ -3,14 +3,14 @@
     <div class="header">
       <div class="left">
         <img src="../assets/images/logo.png" alt="">
-        <p>节点精灵</p>
+        <p>AirScript</p>
       </div>
       <div class="right">
         <div class="btn active">首页</div>
-        <div class="btn" @click="handleGoto('http://www.nspirit.cn/product/make.html')">节点圈</div>
-        <div class="btn" @click="handleGoto('https://dwz.hm.baidu.com/redirect/vh78IkkX?target=vh78IkkX&d_t=10')">节点VIP</div>
+        <div class="btn" @click="handleGoto('http://www.nspirit.cn/product/make.html')">AirScript圈</div>
+        <div class="btn" @click="handleGoto('https://dwz.hm.baidu.com/redirect/vh78IkkX?target=vh78IkkX&d_t=10')">AirScriptVIP</div>
         <div class="btn" @click="handleGoto('http://www.nspirit.cn/api/')">开发文档</div>
-        <div class="btn dever" @click="handleGoto('http://card.nspirit.cn/admin/auth/login')">开发者中心</div>
+        <!-- <div class="btn dever" @click="handleGoto('http://card.nspirit.cn/admin/auth/login')">开发者中心</div> -->
       </div>
     </div>
 
@@ -26,31 +26,55 @@
           </div>
         </el-carousel-item>
 
-        <el-carousel-item>
+        <!-- <el-carousel-item>
           <div class="banner_second banner_item"></div>
-        </el-carousel-item>
+        </el-carousel-item> -->
 
 
       </el-carousel>
     </div>
 
     <div class="module why-node">
-      <div class="title">为什么选择节点</div>
+      <div class="title">为什么选择AirScript</div>
       <div class="tabs-box">
         <el-tabs v-model="data.tabName" class="demo-tabs" @tab-click="handleClick">
-          <el-tab-pane class="tab-page" label="免root小程序" name="tabA">免root小程序</el-tab-pane>
-          <el-tab-pane class="tab-page" label="图像控件检索" name="tabB">图像控件检索</el-tab-pane>
-          <el-tab-pane class="tab-page" label="深度学习" name="tabC">深度学习</el-tab-pane>
-          <el-tab-pane class="tab-page" label="文字识别" name="tabD">文字识别</el-tab-pane>
-          <el-tab-pane class="tab-page" label="免部署云数据库" name="tabE">免部署云数据库</el-tab-pane>
-          <el-tab-pane class="tab-page" label="app独立打包" name="tabF">app独立打包</el-tab-pane>
+          <el-tab-pane class="tab-page" label="免root小程序" name="tabA">
+            <div class="video-box">
+              <video src="../assets/images/80_1678367293.mp4" controls></video>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane class="tab-page" label="图像控件检索" name="tabB">
+            <div class="video-box">
+              <video src="../assets/images/80_1678367293.mp4" controls></video>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane class="tab-page" label="深度学习" name="tabC">
+            <div class="video-box">
+              <video src="../assets/images/80_1678367293.mp4" controls></video>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane class="tab-page" label="文字识别" name="tabD">
+            <div class="video-box">
+              <video src="../assets/images/80_1678367293.mp4" controls></video>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane class="tab-page" label="免部署云数据库" name="tabE">
+            <div class="video-box">
+              <video src="../assets/images/80_1678367293.mp4" controls></video>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane class="tab-page" label="app独立打包" name="tabF">
+            <div class="video-box">
+              <video src="../assets/images/80_1678367293.mp4" controls></video>
+            </div>
+          </el-tab-pane>
         </el-tabs>
       </div>
     </div>
 
     <div class="module module-developer">
       <div class="title">
-        <span>节点精灵开发者</span>
+        <span>AirScript开发者</span>
         <p @click="data.dialogVisible = true">专属认证标准</p>
       </div>
 
@@ -58,7 +82,7 @@
         <div class="ranking-item ranking-A">
           <div class="grade">
             <img class="badge" src="../assets/images/gold_medal.png" alt="">
-            <div class="label">节点精灵院士</div>
+            <div class="label">AirScript院士</div>
           </div>
           <div class="users">
             <div class="user-item" v-for="(userItem, index) in data.ranking['A']" :key="index">
@@ -73,7 +97,7 @@
         <div class="ranking-item ranking-B">
           <div class="grade">
             <img class="badge" src="../assets/images/silver_medal.png" alt="">
-            <div class="label">节点精灵教授</div>
+            <div class="label">AirScript教授</div>
           </div>
           <div class="users">
             <div class="user-item" v-for="(userItem, index) in data.ranking['B']" :key="index">
@@ -196,7 +220,7 @@
             </div>
             <div class="tool-list">
               <div class="tool-title">插件库</div>
-              <div @click="handleGoto('http://www.nspirit.cn/product/app.html')" class="tool-link">节点精灵APP >></div>
+              <div @click="handleGoto('http://www.nspirit.cn/product/app.html')" class="tool-link">AirScriptAPP >></div>
               <div @click="handleGoto('https://mumu.163.com/mac/index.html')" class="tool-link">mumu模拟器 >></div>
               <div @click="handleGoto('https://code.visualstudio.com/')" class="tool-link">vsCode开发工具 >></div>
             </div>
@@ -217,27 +241,30 @@
         <span>隐私协议</span>
       </div>
     </div>
+
     <div class="contact-qq">
-      <el-tooltip
-        effect="dark"
-        content="939874706"
-        placement="left-start"
-      >
-        <img src="../assets/images/qq.png" alt="">
-      </el-tooltip>
+      <el-popover placement="right" :width="200" trigger="hover">
+        <template #reference>
+          <img src="../assets/images/we_chart_logo.png" alt="">
+        </template>
+        <div>
+          <img src="../assets/images/we_chart.png" alt="">
+        </div>
+      </el-popover>
     </div>
+
     <el-dialog
       v-model="data.dialogVisible"
       title="认证标准"
       width="45%"
     >
-      <p>普通开发者：节点精灵开放平台成功注册账户</p>
+      <p>普通开发者：AirScript开放平台成功注册账户</p>
       <p>铜牌开发者：精通lua语法，通过lua语法测评题</p>
-      <p>银牌开发者：成为铜牌开发者，通过节点精灵api专属测试题</p>
+      <p>银牌开发者：成为铜牌开发者，通过AirScriptapi专属测试题</p>
       <p>金牌开发者：成为银牌开发者，通过应用场景测试专属测试题</p>
-      <p>荣誉开发者：成为金牌开发者，在节点精灵平台成功发布开发者软件，并通过专属测试题</p>
-      <p>节点精灵教授：成为荣誉开发者，在节点精灵平台成功发布论文，并通过专属测试题</p>
-      <p>节点精灵院士：成为节点精灵教授，对节点有重精灵开放平台作出重大贡献</p>
+      <p>荣誉开发者：成为金牌开发者，在AirScript平台成功发布开发者软件，并通过专属测试题</p>
+      <p>AirScript教授：成为荣誉开发者，在AirScript平台成功发布论文，并通过专属测试题</p>
+      <p>AirScript院士：成为AirScript教授，对AirScript开放平台作出重大贡献</p>
     </el-dialog>
   </div>
 </template>
