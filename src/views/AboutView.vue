@@ -21,13 +21,8 @@ const fullpage = {
         isScrolling: false, // 是否在滚动,是为了防止滚动多页，需要通过一个变量来控制是否滚动
         deltaY: 0 // 返回鼠标滚轮的垂直滚动量，保存的鼠标滚动事件的deleteY,用来判断是往下还是往上滚
 }
-
-let startTime = undefined // 记录触摸开始的时间
-let startX = undefined // 记录触摸开始的X坐标，本次主要实现的是上下滑动，所以当前坐标不做强制要求
-let startY = undefined // 记录触摸开始的Y坐标
-
 // 滚动事件
-const move = (index) => {
+const move = (index: number) => {
       fullpage.isScrolling = true; // 为了防止滚动多页，需要通过一个变量来控制是否滚动
       directToMove(index); //执行滚动
       setTimeout(() => {  //这里的动画是1s执行完，使用setTimeout延迟1s后解锁

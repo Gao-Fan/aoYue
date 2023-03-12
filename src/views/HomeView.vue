@@ -1,32 +1,53 @@
 <template>
+  <div class="contact-qq">
+      <el-popover placement="right" :width="200" trigger="hover">
+        <template #reference>
+          <img src="../assets/images/we_chart_logo.png" alt="">
+        </template>
+        <div>
+          <img src="../assets/images/we_chart.png" alt="">
+        </div>
+      </el-popover>
+    </div>
   <div class="home-box" id="homeBox" ref="fullPageBox">
-    <div
-        class="fullPageContainer"
-        ref="fullPageContainer"
-        @mousewheel="mouseWheelHandle"
-    >
-      <div class="header">
-        <div class="left">
-          <img src="../assets/images/logo.png" alt="">
-          <p>AirScript</p>
-        </div>
-        <div class="right">
-          <div class="btn active">首页</div>
-          <div class="btn" @click="handleGoto('http://www.nspirit.cn/product/make.html')">AirScript圈</div>
-          <div class="btn" @click="handleGoto('https://dwz.hm.baidu.com/redirect/vh78IkkX?target=vh78IkkX&d_t=10')">AirScriptVIP</div>
-          <div class="btn" @click="handleGoto('http://www.nspirit.cn/api/')">开发文档</div>
-          <!-- <div class="btn dever" @click="handleGoto('http://card.nspirit.cn/admin/auth/login')">开发者中心</div> -->
-        </div>
+    <div class="header">
+      <div class="left">
+        <img src="../assets/images/logo.png" alt="">
+        <p>AirScript</p>
       </div>
+      <div class="right">
+        <div class="btn active">首页</div>
+        <div class="btn" @click="handleGoto('http://www.nspirit.cn/product/make.html')">AirScript圈</div>
+        <div class="btn" @click="handleGoto('https://dwz.hm.baidu.com/redirect/vh78IkkX?target=vh78IkkX&d_t=10')">AirScriptVIP</div>
+        <div class="btn" @click="handleGoto('http://www.nspirit.cn/api/')">开发文档</div>
+        <div class="btn dever" @click="handleGoto('http://card.nspirit.cn/admin/auth/login')">开发者中心</div>
+      </div>
+    </div>
 
+    <div class="fullPageContainer" ref="fullPageContainer" @mousewheel="mouseWheelHandle">
       <div class="module module-swiper">
         <!-- 这里是轮播图 -->
-        <el-carousel height="540px" :autoplay="true" :interval="3000" :loop="true">
+        <el-carousel height="100vh" :autoplay="true" :interval="3000" :loop="true">
           <el-carousel-item>
             <div class="banner_first banner_item">
+              <div class="iphone-img">
+                <img src="../assets/images/banner_iphone.png" alt="">
+              </div>
               <div class="cover-module">
-                <div class="download-btn" @click="handleGoto('http://card.nspirit.cn/getApk')">下载安装</div>
-                <div class="record-btn" @click="handleGoto('http://www.nspirit.cn/product/app.html')">历史版本》</div>
+                <div class="introduce">
+                  <div class="tip">免ROOT，安卓平台运行，自动化工具</div>
+                  <div class="items">lua语言开发｜零门槛学习｜前沿的AI技术｜任意脚本均可运行</div>
+                </div>
+                <div class="link-box">
+                  <div class="qr-code">
+                    <img src="../assets/images/banner_qr_code.png" alt="" />
+                    <p>扫码下载</p>
+                  </div>
+                  <div class="btns">
+                    <div class="download-btn" @click="handleGoto('http://card.nspirit.cn/getApk')">下载安装</div>
+                    <div class="record-btn" @click="handleGoto('http://www.nspirit.cn/product/app.html')">历史版本》</div>
+                  </div>
+                </div>
               </div>
             </div>
           </el-carousel-item>
@@ -77,7 +98,7 @@
         </div>
       </div>
 
-      <div class="module module-developer">
+      <!-- <div class="module module-developer">
         <div class="title">
           <span>AirScript开发者</span>
           <p @click="data.dialogVisible = true">专属认证标准</p>
@@ -184,7 +205,7 @@
         <div class="developer-square">
           <div class="btn" @click="handleGoto('http://card.nspirit.cn/admin/auth/login')">开发者中心</div>
         </div>
-      </div>
+      </div> -->
 
       <div class="module module-guide">
         <div class="title">新手入门</div>
@@ -232,22 +253,23 @@
             </div>
           </div>
         </div>
+
+        <div class="module-footer">
+          <div class="record-no">
+            @2019-2022 aoyue tec 京ICP备2020040944号-2
+          </div>
+          <div class="footer-link">
+            <span>联系我们</span> ｜
+            <span @click="handleGoto('http://www.nspirit.cn/about/web/mzsm.html')">免责声明</span> ｜
+            <span @click="handleGoto('http://www.nspirit.cn/about/web/yhxy.html')">用户协议</span> ｜
+            <span @click="handleGoto('http://www.nspirit.cn/about/web/kfzxy.html')">开发者协议</span> ｜
+            <span>隐私协议</span>
+          </div>
+        </div>
       </div>
 
-      <div class="module module-footer">
-        <div class="record-no">
-          @2019-2022 aoyue tec 京ICP备2020040944号-2
-        </div>
-        <div class="footer-link">
-          <span>联系我们</span> ｜
-          <span @click="handleGoto('http://www.nspirit.cn/about/web/mzsm.html')">免责声明</span> ｜
-          <span @click="handleGoto('http://www.nspirit.cn/about/web/yhxy.html')">用户协议</span> ｜
-          <span @click="handleGoto('http://www.nspirit.cn/about/web/kfzxy.html')">开发者协议</span> ｜
-          <span>隐私协议</span>
-        </div>
-      </div>
 
-      <div class="contact-qq">
+      <!-- <div class="contact-qq">
         <el-popover placement="right" :width="200" trigger="hover">
           <template #reference>
             <img src="../assets/images/we_chart_logo.png" alt="">
@@ -256,7 +278,7 @@
             <img src="../assets/images/we_chart.png" alt="">
           </div>
         </el-popover>
-      </div>
+      </div> -->
 
       <el-dialog
         v-model="data.dialogVisible"
@@ -358,17 +380,13 @@ const directToMove = (index: number) => {
   let height = fullPageBox.value.clientHeight; //获取屏幕的高度
   let scrollPage = fullPageContainer // 获取执行tarnsform的元素
   let scrollHeight; // 计算滚动的告诉，是往上滚还往下滚
-  if (index === 5) {
-    scrollHeight = -(index - 1) * height + (height / 2.5) + 'px'
-  } else {
-    scrollHeight = -(index - 1) * height + 'px'
-  }
+  scrollHeight = -(index - 1) * height + 'px'
   scrollPage.value.style.transform = `translateY(${scrollHeight})`  
   fullpage.current = index;
 }
 
 const next = () => {
-  let len = 5; // 页面的个数
+  let len = 3; // 页面的个数
   if (fullpage.current + 1 <= len) { // 如果当前页面编号+1 小于总个数，则可以执行向下滑动
     fullpage.current += 1; // 页面+1
     move(fullpage.current); // 执行切换

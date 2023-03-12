@@ -3,125 +3,183 @@
 .home-box {
   height: 100vh;
   overflow: hidden;
+  .header {
+    height: 56px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 10px;
+    // position: sticky;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    .left {
+      display: flex;
+      align-items: center;
+      width: 200px;
+      img {
+        width: 37.49px;
+        height: 33.6px;
+        &:hover {
+          cursor:pointer;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+    .right {
+      display: flex;
+      box-sizing: border-box;
+      padding-right: 22px;
+      align-items: center;
+      .btn {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        line-height: 24px;
+        color: rgba(26, 26, 26, 1);
+        margin-left: 52px;
+        &.active {
+         color: rgba(63, 175, 124, 1);
+        }
+        &:hover {
+          cursor:pointer;
+        }
+      }
+      .dever {
+        width: 114px;
+        height: 36px;
+        opacity: 1;
+        border-radius: 18px;
+        background: rgba(63, 175, 124, 1);
+        line-height: 36px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
   .fullPageContainer {
     width: 100%;
     height: 100vh;
     transition: all linear 0.5s;
-    .header {
-      height: 56px;
-      opacity: 1;
-      background: rgba(255, 255, 255, 1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-sizing: border-box;
-      padding: 0 10px;
-      position: sticky;
-      top: 0;
-      z-index: 99;
-      .left {
-        display: flex;
-        align-items: center;
-        width: 200px;
-        img {
-          width: 37.49px;
-          height: 33.6px;
-          &:hover {
-            cursor:pointer;
-          }
-        }
-        p {
-          font-size: 16px;
-          font-weight: 500;
-          letter-spacing: 0px;
-          line-height: 24px;
-          color: rgba(0, 0, 0, 1);
-        }
-      }
-      .right {
-        display: flex;
-        box-sizing: border-box;
-        padding-right: 22px;
-        align-items: center;
-        .btn {
-          font-size: 16px;
-          font-weight: 500;
-          letter-spacing: 0px;
-          line-height: 24px;
-          color: rgba(26, 26, 26, 1);
-          margin-left: 52px;
-          &.active {
-           color: rgba(63, 175, 124, 1);
-          }
-          &:hover {
-            cursor:pointer;
-          }
-        }
-        .dever {
-          width: 114px;
-          height: 36px;
-          opacity: 1;
-          border-radius: 18px;
-          background: rgba(63, 175, 124, 1);
-          line-height: 36px;
-          text-align: center;
-          font-size: 14px;
-          font-weight: 400;
-          letter-spacing: 0px;
-          color: rgba(255, 255, 255, 1);
-        }
-      }
-    }
+    
     .module {
-      // height: 100vh;
-      // min-height: 100vh;
-      // max-height: 100vh;
+      height: 100vh;
+      min-height: 100vh;
+      max-height: 100vh;
     }
+
     .module-swiper {
       height: 540px;
-      // height: 100vh;
+      height: 100vh;
+      max-height: 100vh;
       .demonstration {
         color: var(--el-text-color-secondary);
       }
       .el-carousel__item .banner_item {
-        height: 540px;
-        background-size: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
       }
       .el-carousel__item .banner_first {
-        background-image: url('../../../banner_A.png'); // 需调研
+        background-image: url('../../../bannerA_bg.png'); // 需调研
+        // background-size: 100vw 100vh;
         position: relative;
+        display: flex;
+        box-sizing: border-box;
+        padding: 70px 0;
+        justify-content: center;
+        .iphone-img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 86px;
+          img {
+            width: 214px;
+            height: 440px;
+          }
+        }
         .cover-module {
-          position: absolute;
-          top: 314px;
-          left: 734px;
-          width: 116px;
-          .download-btn {
-            width: 114px;
-            height: 36px;
-            border-radius: 18px;
-            background: rgba(63, 175, 124, 1);
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0px;
-            line-height: 36px;
-            color: rgba(255, 255, 255, 1);
-            text-align: center;
-            &:hover {
-              cursor:pointer;
+          display: flex;
+          // align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          .introduce {
+            .tip {
+              font-size: 42px;
+              font-weight: 600;
+              letter-spacing: 0px;
+              line-height: 64px;
+              color: rgba(37, 38, 38, 1);
             }
           }
-          .record-btn {
-            margin-top: 14px;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0px;
-            line-height: 22px;
-            color: rgba(102, 102, 102, 1);
-            text-align: center;
-            background-color: #f4f8fc;
-            &:hover {
-              cursor:pointer;
+          .link-box {
+            display: flex;
+            margin-top: 36px;
+            .qr-code {
+              width: 180px;
+              box-sizing: border-box;
+              padding: 10px;
+              background-color: #fff;
+              height: 210px;
+              border-radius: 8px;
+              margin-right: 30px;
+              img {
+                width: 160px;
+              }
+              p {
+                text-align: center;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0px;
+                line-height: 0px;
+                color: rgba(102, 102, 102, 1);
+              }
+            }
+            .btns {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              .download-btn {
+                width: 114px;
+                height: 36px;
+                border-radius: 18px;
+                background: rgba(63, 175, 124, 1);
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0px;
+                line-height: 36px;
+                color: rgba(255, 255, 255, 1);
+                text-align: center;
+                &:hover {
+                  cursor:pointer;
+                }
+              }
+              .record-btn {
+                margin-top: 14px;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0px;
+                line-height: 22px;
+                color: rgba(102, 102, 102, 1);
+                text-align: center;
+                background-color: #f4f8fc;
+                &:hover {
+                  cursor:pointer;
+                }
+              }
             }
           }
         }
@@ -131,15 +189,20 @@
         background-image: url('../../../banner_B.png'); // 需调研
       }
     }
+
     .why-node {
       box-sizing: border-box;
-      padding: 100px;
+      height: 100vh;
+      max-height: 100vh;
+      min-height: 100vh;
+      padding: 60px;
       .title {
         font-size: 40px;
         font-weight: 600;
         color: rgba(37, 38, 38, 1);
+        width: 100%;
         text-align: center;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
       }
       .tabs-box {
         margin: 0 auto;
@@ -332,7 +395,13 @@
     .module-guide {
       width: 100%;
       box-sizing: border-box;
-      padding: 98px 138px;
+      padding: 98px 0;
+      height: 100vh;
+      min-height: 100vh;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
       .title {
         text-align: center;
         font-size: 40px;
@@ -340,7 +409,7 @@
         color: rgba(37, 38, 38, 1);
       }
       .guide-content {
-        margin-top: 64px;
+        margin: 64px auto 0;
         display: flex;
         .shadow-box {
           border-radius: 8px;
@@ -422,44 +491,49 @@
           }
         }
       }
-    }
-    .module-footer {
-      height: 72px;
-      opacity: 1;
-      background: rgba(43, 43, 43, 1);
-      font-size: 14px;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      div {
-        margin: 0 86px;
-        span {
-          &:hover {
-            cursor:pointer;
+      .module-footer {
+        position: absolute;
+        bottom: 0;
+        height: 72px;
+        opacity: 1;
+        width: 100vw;
+        background: rgba(43, 43, 43, 1);
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+          margin: 0 86px;
+          span {
+            &:hover {
+              cursor:pointer;
+            }
           }
         }
-      }
-    }
-    .contact-qq {
-      position: fixed;
-      top: 72vh;
-      right: 50px;
-      transform: translateY(-50%);
-      width: 80px;
-      height: 80px;
-      box-shadow: 0px 0px 4px -2px rgba(26, 26, 26, 0.24), 0px 2px 4px 0px rgba(26, 26, 26, 0.08), 0px 12px 24px -4px rgba(26, 26, 26, 0.12);
-      background-color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 70px;
-        height: 70px;
       }
     }
   }  
 }
 
+
+
+.contact-qq {
+  position: fixed;
+  top: 72vh;
+  right: 50px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  box-shadow: 0px 0px 4px -2px rgba(26, 26, 26, 0.24), 0px 2px 4px 0px rgba(26, 26, 26, 0.08), 0px 12px 24px -4px rgba(26, 26, 26, 0.12);
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
