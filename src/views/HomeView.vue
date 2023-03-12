@@ -1,14 +1,15 @@
 <template>
   <div class="contact-qq">
-      <el-popover placement="right" :width="200" trigger="hover">
-        <template #reference>
-          <img src="../assets/images/we_chart_logo.png" alt="">
-        </template>
-        <div>
-          <img src="../assets/images/we_chart.png" alt="">
-        </div>
-      </el-popover>
-    </div>
+    <el-popover placement="right" :width="200" trigger="hover">
+      <template #reference>
+        <img src="../assets/images/we_chart_logo.png" alt="">
+      </template>
+      <div>
+        <img src="../assets/images/we_chart.png" alt="">
+      </div>
+    </el-popover>
+  </div>
+
   <div class="home-box" id="homeBox" ref="fullPageBox">
     <div class="header">
       <div class="left">
